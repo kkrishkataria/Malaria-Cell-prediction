@@ -1,0 +1,11 @@
+tensorflow
+fastapi
+uvicorn
+python-multipart
+opencv-python
+pandas
+seaborn
+matplotlib
+scikit-learn
+Pillow
+jinja2

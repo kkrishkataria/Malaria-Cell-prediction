@@ -1,0 +1,17 @@
+# Dataset (Preventing thousands of images from being pushed)
+cell_images/
+
+# Python Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Large Model Files
+*.h5
+
+# Frontend dependencies and builds
+frontend/node_modules/
+frontend/dist/
+
+# OS generated files
+.DS_Store
