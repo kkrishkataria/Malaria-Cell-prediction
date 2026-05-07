@@ -1,0 +1,16 @@
+/Users/krishkataria/Desktop/Work/Malaria Cell prediction/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [36142]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+Model file malaria_model_validated.h5 not found. Please train the model first.
+Model file malaria_model_validated.h5 not found. Please train the model first.
+Using mock prediction mode since model is not trained yet.
+INFO:     127.0.0.1:65073 - "POST /predict HTTP/1.1" 200 OK
+Model file malaria_model_validated.h5 not found. Please train the model first.
+Using mock prediction mode since model is not trained yet.
+INFO:     127.0.0.1:65083 - "POST /predict HTTP/1.1" 200 OK
+Model file malaria_model_validated.h5 not found. Please train the model first.
+Using mock prediction mode since model is not trained yet.
+INFO:     127.0.0.1:65087 - "POST /predict HTTP/1.1" 200 OK

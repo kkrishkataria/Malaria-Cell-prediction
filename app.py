@@ -1,15 +1,23 @@
 import os
 import io
 import cv2
+import base64
 import numpy as np
 import tensorflow as tf
-from fastapi import FastAPI, File, UploadFile, HTTPException
-from fastapi.responses import JSONResponse
-from fastapi.staticfiles import StaticFiles
 from PIL import Image
-import base64
+from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi.staticfiles import StaticFiles
+from contextlib import asynccontextmanager
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup: Load the model
+    load_malaria_model()
+    yield
+    # Shutdown: Clean up resources if needed
+    print("Shutting down...")
+
+app = FastAPI(lifespan=lifespan)
 
 # Load the model
 MODEL_PATH = "malaria_model_validated.h5"
@@ -26,9 +34,7 @@ def load_malaria_model():
     else:
         print(f"Model file {MODEL_PATH} not found. Please train the model first.")
 
-@app.on_event("startup")
-async def startup_event():
-    load_malaria_model()
+# (Removed deprecated on_event)
 
 def make_gradcam_heatmap(img_array, model, last_conv_layer_name, pred_index=None):
     grad_model = tf.keras.models.Model(
