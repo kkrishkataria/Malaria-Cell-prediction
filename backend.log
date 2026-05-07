@@ -1,16 +1,27 @@
 /Users/krishkataria/Desktop/Work/Malaria Cell prediction/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
   warnings.warn(
-INFO:     Started server process [36142]
+INFO:     Started server process [39693]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 Model file malaria_model_validated.h5 not found. Please train the model first.
+INFO:     127.0.0.1:50582 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50582 - "GET /favicon.ico HTTP/1.1" 404 Not Found
 Model file malaria_model_validated.h5 not found. Please train the model first.
 Using mock prediction mode since model is not trained yet.
-INFO:     127.0.0.1:65073 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50663 - "POST /predict HTTP/1.1" 200 OK
 Model file malaria_model_validated.h5 not found. Please train the model first.
 Using mock prediction mode since model is not trained yet.
-INFO:     127.0.0.1:65083 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50672 - "POST /predict HTTP/1.1" 200 OK
 Model file malaria_model_validated.h5 not found. Please train the model first.
 Using mock prediction mode since model is not trained yet.
-INFO:     127.0.0.1:65087 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "POST /predict HTTP/1.1" 200 OK
+Model file malaria_model_validated.h5 not found. Please train the model first.
+Using mock prediction mode since model is not trained yet.
+INFO:     127.0.0.1:50678 - "POST /predict HTTP/1.1" 200 OK
+Model file malaria_model_validated.h5 not found. Please train the model first.
+Using mock prediction mode since model is not trained yet.
+INFO:     127.0.0.1:50681 - "POST /predict HTTP/1.1" 200 OK
+Model file malaria_model_validated.h5 not found. Please train the model first.
+Using mock prediction mode since model is not trained yet.
+INFO:     127.0.0.1:50732 - "POST /predict HTTP/1.1" 200 OK
