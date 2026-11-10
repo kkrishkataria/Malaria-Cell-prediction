@@ -18,7 +18,9 @@ IMAGE_SIZE = (128, 128)
 app = FastAPI(title="CellScope AI", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    # This is a public, read-only demo API. Vercel preview and production URLs
+    # vary, so allow browser clients from any origin rather than hard-coding one.
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
