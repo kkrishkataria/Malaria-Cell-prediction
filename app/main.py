@@ -28,6 +28,17 @@ app.add_middleware(
 _model: tf.keras.Model | None = None
 
 
+@app.get("/")
+def index() -> dict:
+    """Make the public service URL useful when opened directly in a browser."""
+    return {
+        "service": "CellScope AI - Malaria Cell Classification API",
+        "status_endpoint": "/api/health",
+        "interactive_docs": "/docs",
+        "prediction_endpoint": "/api/predict",
+    }
+
+
 def get_model() -> tf.keras.Model:
     global _model
     if _model is None:
