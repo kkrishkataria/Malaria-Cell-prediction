@@ -1,17 +1,16 @@
-# Dataset (Preventing thousands of images from being pushed)
-cell_images/
+# Dataset and generated machine-learning artefacts
+data/raw/cell_images/
+models/*.keras
+models/*.json
 
-# Python Virtual Environment
+# Python
+.venv/
 venv/
 __pycache__/
-*.pyc
+*.py[cod]
 
-# Large Model Files
-*.h5
-
-# Frontend dependencies and builds
+# Frontend
 frontend/node_modules/
 frontend/dist/
 
-# OS generated files
 .DS_Store

@@ -1,0 +1,7 @@
+/* Decorative hero cell: contained within the navy banner, clear of navigation. */
+.orb-one {
+  width: 390px;
+  height: 390px;
+  right: -72px;
+  top: 42px;
+}
