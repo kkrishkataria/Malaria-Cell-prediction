@@ -33,4 +33,11 @@ npm run dev
 
 Open `http://localhost:5173`. The model API runs at `http://localhost:8000`.
 
+## Deployment
+
+Deploy `frontend/` to Vercel and `app/` to a Python web service such as Render.
+In Vercel, add an environment variable named `VITE_API_URL` with the public
+Render service URL, for example `https://cellscope-api.onrender.com`. Redeploy
+the frontend after saving the variable.
+
 > This project is for learning and screening support only. It is not a clinical diagnostic device.

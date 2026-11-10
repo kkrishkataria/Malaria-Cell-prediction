@@ -4,6 +4,7 @@ import './styles.css'
 import './overrides.css'
 
 const sampleMetrics = { architecture: 'Custom CNN', image_size: '128 x 128', dataset: 'NIH Malaria Cell Images', validation_accuracy: 'Train to generate' }
+const API_BASE_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 
 function App() {
   const input = useRef(null)
@@ -23,9 +24,10 @@ function App() {
     setLoading(true); setMessage('')
     const form = new FormData(); form.append('file', file)
     try {
-      const response = await fetch('/api/predict', { method: 'POST', body: form })
-      const data = await response.json()
-      if (!response.ok) throw new Error(data.detail)
+      const response = await fetch(`${API_BASE_URL}/api/predict`, { method: 'POST', body: form })
+      const data = await response.json().catch(() => null)
+      if (!response.ok) throw new Error(data?.detail || 'The prediction service returned an unexpected response.')
+      if (!data) throw new Error('The prediction service did not return valid JSON.')
       setResult(data)
     } catch (error) { setMessage(error.message || 'Could not reach the local API.') }
     finally { setLoading(false) }
