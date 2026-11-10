@@ -1,0 +1,21 @@
+{
+  "model_trained": true,
+  "architecture": "Custom CNN",
+  "image_size": "128 x 128",
+  "dataset": "NIH Malaria Cell Images",
+  "classes": [
+    "Parasitized",
+    "Uninfected"
+  ],
+  "validation_accuracy": 50.26,
+  "confusion_matrix": [
+    [
+      1248,
+      1469
+    ],
+    [
+      1272,
+      1522
+    ]
+  ]
+}
